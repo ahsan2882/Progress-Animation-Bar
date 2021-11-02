@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .rect {
+            height: 0;
+            width: 100px;
+            background: rgba(0, 0, 0, 0.5);
+            position: relative;
+            margin-top: -150px;
+        }
+
+        .circle {
+            display: block;
+            width: 100px;
+            height: 50px;
+            top: 60px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .circle:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            border-radius: 100%;
+            background: transparent;
+            position: absolute;
+            top: -100px;
+            left: -40px;
+            border: 40px solid white;
+        }
+
+        .bottom-circle {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .top-circle {
+            /* transform: scaleY(-1); */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: scaleY(-1);
+        }
+
+        .bar {
+            width: 15.9%;
+            margin-top: 5px;
+            background: white;
+            height: 50px;
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .animation {
+            background-color: #F6F9FD;
+            width: 100%;
+            height: 110px;
+            position: absolute;
+            top: 0;
+            z-index: -2;
+        }
+
+        .show-progress {
+            animation: load 3s normal forwards infinite;
+            background: #E1ECF7;
+            position: absolute;
+            top: 0;
+            height: 110px;
+            z-index: -1;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+            /* 25%{
+                width: 25%;
+            }
+            50%{
+                width: 50%
+            }
+            75%{
+                width: 75%;
+            } */
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="progress-bar">
+        <div class="top-circle">
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+        </div>
+        <div class="bottom-circle">
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="bar"></div>
+        </div>
+        <div class="animation"></div>
+        <div class="show-progress"></div>
+    </div>
+</body>
+
+</html>
