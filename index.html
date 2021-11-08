@@ -17,16 +17,16 @@
 
         .rect {
             height: 0;
-            width: 100px;
+            width: 7%;
             background: rgba(0, 0, 0, 0.5);
             position: relative;
-            margin-top: -150px;
+            margin-top: -196px;
         }
 
         .circle {
             display: block;
-            width: 100px;
-            height: 50px;
+            width: 100%;
+            height: 70px;
             top: 60px;
             left: 0;
             overflow: hidden;
@@ -35,15 +35,15 @@
 
         .circle:after {
             content: '';
-            width: 100px;
-            height: 100px;
+            width: 103%;
+            height: 130px;
             -moz-border-radius: 100px;
             -webkit-border-radius: 100px;
             border-radius: 100%;
             background: transparent;
             position: absolute;
             top: -100px;
-            left: -40px;
+            left: -42px;
             border: 40px solid white;
         }
 
@@ -63,8 +63,8 @@
         }
 
         .bar {
-            width: 15.9%;
-            margin-top: 5px;
+            width: 15.55%;
+            margin-top: 14px;
             background: white;
             height: 50px;
         }
@@ -80,34 +80,33 @@
         .animation {
             background-color: #F6F9FD;
             width: 100%;
-            height: 110px;
+            height: 128px;
             position: absolute;
             top: 0;
             z-index: -2;
         }
 
         .show-progress {
-            animation: load 3s normal forwards infinite;
+            animation: load 8s linear forwards infinite;
             background: #E1ECF7;
             position: absolute;
             top: 0;
-            height: 110px;
+            height: 128px;
             z-index: -1;
+        }
+
+        .text {
+            position: absolute;
+            top: 39px;
+            left: 40%;
+            font-size: 45px;
         }
 
         @keyframes load {
             0% {
                 width: 0;
             }
-            /* 25%{
-                width: 25%;
-            }
-            50%{
-                width: 50%
-            }
-            75%{
-                width: 75%;
-            } */
+
             100% {
                 width: 100%;
             }
@@ -127,13 +126,25 @@
         </div>
         <div class="bottom-circle">
             <div class="bar"></div>
-            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="rect">&nbsp;
+                <span class="circle"></span>
+                <span class="text">1</span>
+            </div>
             <div class="bar"></div>
-            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="rect">&nbsp;
+                <span class="circle"></span>
+                <span class="text">2</span>
+            </div>
             <div class="bar"></div>
-            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="rect">&nbsp;
+                <span class="circle"></span>
+                <span class="text">3</span>
+            </div>
             <div class="bar"></div>
-            <div class="rect">&nbsp;<span class="circle"></span></div>
+            <div class="rect">&nbsp;
+                <span class="circle"></span>
+                <span class="text">4</span>
+            </div>
             <div class="bar"></div>
         </div>
         <div class="animation"></div>
